@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap');
+        body{
+            background-color: rgb(11, 11, 31);
+            color: white;
+            font-family:"Exo";
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: rgb(15, 15, 58);
+
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+
+        }
+        nav ul li{
+            margin: 0 15px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+
+        }
+        nav ul li a:hover{
+            color: rgb(170, 47, 170);
+
+        }
+        .left{
+            font-size: 1.5rem;
+        }
+        .firstselection{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 170px;
+
+
+
+        }
+        .firstselection > div{
+            width: 30%;
+            margin-bottom: 20px;
+
+        }
+        .leftselection{
+            font-size: 2rem;
+            margin-top:30px;
+            
+        }
+        #element{
+            color: plum;
+
+        }
+        .purple{
+            color: plum;
+
+        }
+        .rightselection img{
+            width:100% ;
+        }
+        hr{
+            background-color: plum;
+            border: 0;
+            height: 1px;
+            margin:20px 0 ;
+        }
+        .thirdsection{
+            height: 80vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 70%;
+
+        }
+         .image{
+            width: 20%;
+        }
+        .image img{
+            width: 300px;
+            
+
+        }
+        .center{
+            margin-top: 8%;
+            width: 100%;
+            display: flex;
+            justify-content:space-around;
+           align-items:center ;
+        
+         }
+        .about{
+            width: 60%;
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+
+        }
+        
+        .about h1{
+           margin-bottom: 22px;
+           color: #2eb5b5;
+        }
+
+        .about p{
+            font-family: "Exo";
+          margin-bottom: 60px;
+          
+
+        }
+        .about .down{
+            margin-top:40px ;
+            padding: 10px;
+            width: 120px;
+           
+            background-color: transparent;
+            border: 2px solid white;
+            color: plum;
+            font-family:"Exo" ;
+            font-size: 15px;
+
+
+
+        } 
+        .about .down:hover{
+            font-size: 15px;
+            background-color: plum;
+            color: white;
+
+        }
+        hr{
+            background-color: plum;
+            border: 0;
+            height: 1px;
+            margin:20px 0 ;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .services{
+            height: 98vh;
+        }
+        .services::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /*background-color: rgb(11, 11, 31);*/
+            background-image: url("https://static3.bigstockphoto.com/1/5/3/large1500/351480512.jpg");
+            
+            opacity: 0.30;
+            z-index: -1;
+        }
+        /* .overlay{
+            height: 100%;
+            background-color: black;
+            opacity: 0.6;
+        } */
+        .heading > h1{
+            color: goldenrod;
+            text-align: center;
+            margin-top: 5%;
+        }
+        .heading{
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+            color: white;
+            text-transform: capitalize;
+        }
+        .para{
+            text-align: center;
+            width: 70%;
+        }
+        .field{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10%;
+            font-family: "Exo";
+        }
+        .box{
+            border: 1px solid white;
+            width: 250px;
+            height: 250px;
+            transition: all 0.2s linear;
+            cursor: pointer;
+            font-family: "Exo";        
+        }
+        .box:hover{
+            border: 1px solid goldenrod;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            color: white;
+            font-size: 18px;
+            text-transform: capitalize;
+            font-family: "Exo";
+        }
+        .name{
+            margin-bottom: 8%;
+            font-family: "Exo";
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        
+        }
+        hr{
+            background-color: plum;
+            border: 0;
+            height: 1px;
+            margin:20px 0 ;
+        }
+         #skills{
+            width: 100%;
+            margin: 40px 0px;
+            height: 90vh;
+            position: relative;
+          }
+           #skills #heading{
+            /* background-color: black; */
+            width: 100%;
+            padding-left: 10vw;
+          }
+           #skills #heading h2 {
+            font-size: 1.5vw;
+            color: white;
+            font-weight: 200;
+            text-shadow: 0px 0px 30px black;
+          }
+           #skills #heading h1{
+            font-size: 3vw;  
+            /* color: white; */
+            color: #2eb5b5;
+            font-weight: 400;
+            text-shadow: 0px 0px 30px black;
+          
+          }
+          #skills .box{
+            width: 80%;
+           background-color: white;
+           align-items: center;
+           text-align: center;
+           margin:60px  auto 0px auto;
+            height: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+          
+          }
+          #skills .box .verticle{
+            height: 120px;
+            background-color: white;
+            width: 1.5px;
+            margin-top: 120px;
+          /*  */
+          }
+          .images{
+            display: flex;
+            width: 80%;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          .verticle-title{
+            margin-top: 115px;
+            width: 20vw;
+            font-size: 1.8vw;
+            text-align: left;
+            color: #2eb5b5;
+            text-shadow: 0px 0px 40px rgb(0, 0, 0);
+            /* filter: drop-shadow(0px 0px 40px rgb(215, 5, 5)) ; */
+          }
+          .verticle-title h3{
+            color: #2eb5b5;
+            text-shadow: 10px 10px 30px rgb(0, 0, 0);
+            font-weight: 700;
+            -webkit-text-stroke: 0.5px black;
+          }
+          .verticle-desc{
+            width: 15vw;
+            color: white;
+            text-align: left;
+          }
+          .verticle-desc p{
+            font-size: 1vw;
+          }
+          hr{
+            background-color: plum;
+            border: 0;
+            height: 1px;
+            margin:20px 0 ;
+        }
+        .contact{
+            width: 100%;
+            margin: 60px 0px;
+          }
+          .cntct-main{
+            width: 80%;
+            background-color: #115c367c;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            border-radius: 30px;
+            height: 50vh;
+            display: flex;
+          padding: 10px 60px;
+          }
+          .contact-left{
+            width: 40%;
+          }
+          .contact-left h1{
+            font-size: 3.1vw;
+            color: white;
+            font-weight: 600;
+            padding: 10px 0px;
+          }
+          .contact-left  p{
+            font-size: 1.2vw;
+            color: gray;
+          }
+          .contact-right{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px 0px;
+          }
+          .contact-right .email{
+            background-color: #085a3f;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            /* justify-content: space-around; */
+            border-radius: 20px;
+            gap: 0px 10px;
+          }
+          .contact-right .email p{
+            color: gray;
+            font-size: .9vw;
+          }
+          .contact-right .email h5{
+            color: white;
+            font-size: 1vw;
+          }
+        
+          @media (max-width:900px){ 
+            .cntct-main{
+              flex-direction: column;
+              width: 80%;
+            height: 50vh;
+            align-items: center;
+            justify-content: center;
+            gap: 40px 0px;
+            }
+              
+            }
+            
+            .contact-left{
+              width: 100%;
+              text-align: center;
+            }
+            .contact-right{
+              width: 100%;
+              display: flex;
+          align-items: center;
+          justify-content: center;
+            }
+            .contact-right .email{
+              width: 80%;
+            }
+          
+          .h1{
+            font-family: "Exo";
+            text-align: center;
+          }
+          
+          
+        
+        
+    
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class=right>
+                AYAN Portfolio
+            </div>
+            <div class="main">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/">ABOUTS</a></li>
+                    <li><a href="/">SERVICES</a></li>
+                    <li><a href="/">PROJECTS</a></li>
+                    <li><a href="/">CONTACT ME</a></li>
+                                              
+                </ul>
+
+            </div>
+        </nav>
+ </header>
+    <!-- first section -->
+<section class="firstselection">
+    <div class="leftselection">
+    Hi,My name is <span class="purple">Ayan ali</span>    
+    <div>& I am a possionate</div>
+    <span id="element"></span>
+      </div>
+      <div class="rightselection">
+        <img src="bg_right.png" alt="loading Image">
+
+      </div>
+</section ><br><br><br><br><br>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+        strings :['Flutter Developer.', 'Web Developer.', 'UI/UX Designer.'],
+        typedspeed:50, });
+   
+</script>
+
+
+
+
+      
+<hr>
+<!-- second section -->
+<div class="center">
+    <section class="thirdsection">
+        
+  <div class="image">
+    <img src="john-wick-movie-bg01-portrait.jpg" alt="loading image">
+  </div> 
+   <div class="about">
+    <h1>About Me</h1>
+     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit Corporis repudiandae doloremque velit, autem ullam nam. Dicta beatae cupiditate corrupti excepturi  repellat consectur expedita dolorem facere eos dolor, rerum omnis nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum corporis quasi deleniti, mollitia possimus optio magni perferendis dolore recusandae ducimus ea. Illum aut dolores veniam sed minima doloribus, similique modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo minima nobis cumque dolores at sit eius commodi culpa ut debitis provident a assumenda molestias odio, ipsa, tempore omnis! Accusantium, aliquid?
+    </p>
+     <input type="button" value="Resume" class="down" >
+
+   </div>
+
+    </section>
+</div> 
+<hr>
+<!-- third selection -->
+<div class="services">
+    <span class="heading"><h1>My Services</h1><br><br><br>
+        <div class="para"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia ipsa culpa quis expedita neque ea sequi rerum animi cupiditate eum dolorem quasi minus assumenda reiciendis sit nulla,Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem explicabo cum enim ratione eius, quos molestias velit fugiat reiciendis nobis recusandae aliquid blanditiis odio corporis temporibus tempore debitis facere ipsum. voluptates est id!
+        </p></div><br><br><br><br><br><br><br><br>
+    </span>
+    <div class="field">
+        <div class="box" id="box1"><p class="name"><img src="figma.png" alt=""> Database Design</p></div>
+        <div class="box" id="box2"><p class="name"><img src="flutter.png" alt=""> System Development</p></div>
+        <div class="box" id="box3"><p class="name"><img src="Java.png" alt=""> Backend Development</p></div>
+       
+    </div>
+   
+
+     
+   
+     
+ </div>
+
+<hr>
+   <!-- fourth section -->
+   <section class="skills" id="skills">
+    <div id="heading">
+      <h2>What I have done so far ?</h2>
+      <h1>Work Experience</h1>
+    </div>
+    <div class="images">
+    <img src="flutter.png" alt="" width="80">
+    <img src="web.png" alt="" width="80">
+    <img src="java.png" alt="" width="80">
+    <img src="figma.png" alt="" width="50">
+    </div>
+             <div class="box">
+               <div class="verticle">
+                <div class="verticle-title">
+                  <h3>Flutter Developer</h3>
+                </div>
+                <div class="verticle-desc">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente porro in enim! Lorem ipsum dolor sit amet
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente porro in enim! Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+               <div class="verticle">
+                <div class="verticle-title">
+                  <h3>Web Developer</h3>
+                </div>
+                <div class="verticle-desc">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente porro in enim! Lorem ipsum dolor sit amet
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente porro in enim! Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+               <div class="verticle">
+                <div class="verticle-title">
+                  <h3>Java Developer</h3>
+                </div>
+                <div class="verticle-desc">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente porro in enim! Lorem ipsum dolor sit amet
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente porro in enim! Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+               <div class="verticle">
+                <div class="verticle-title">
+                  <h3>UI/UX Designer</h3>
+                </div>
+                <div class="verticle-desc">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente porro in enim! Lorem ipsum dolor sit amet
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente porro in enim! Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+              
+             </div>
+    </section>
+    
+<hr>
+
+<!-- contant us -->
+
+ 
+<section  class="contact" id="contact">
+    <h1 class="h1">Contact us</h1><br><br>
+    <div class="cntct-main">
+      <div class="contact-left">
+        <h1>Have a project idea. <br> Let's work togather!</h1>
+        <p>Do you fancy saying hi to me or do you want to get started with your project and you may need help? Feel free to contact me.</p>
+      </div>
+      <div class="contact-right">
+        <div class="email">
+          <div class="icon">
+            <img width="30" height="100" src="https://static.vecteezy.com/system/resources/previews/020/009/601/original/email-and-mail-icon-black-free-png.png" alt="new-post"/>
+        </div>
+        <div class="cntnt">
+          <p>CHAT WITH ME</p>
+          <H5>syedayana05@gmail.com</H5>
+        </div>
+      </div>
+          <div class="email">
+            <div class="icon">
+              <img width="30" height="30"  src="phone-png.webp" alt="ringer-volume--v1"/>
+          </div>
+          <div class="cntnt">
+            <p>CALL ME</p>
+            <H5>+92 336 255 7906</H5>
+          </div>
+        </div>
+        </div>
+      </div>
+  </section>
+
+
+
+</body>
+</html>
